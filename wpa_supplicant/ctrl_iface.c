@@ -1570,6 +1570,7 @@ static int wpa_supplicant_ctrl_iface_scan_result(
 			  ANDROID_IBSS_PREFIX, wpa_ssid_txt(bss->ssid, bss->ssid_len));
 	else
 #endif
+
 	ret = os_snprintf(pos, end - pos, "\t%s",
 			  wpa_ssid_txt(bss->ssid, bss->ssid_len));
 	if (ret < 0 || ret >= end - pos)
@@ -1838,6 +1839,7 @@ static int wpa_supplicant_ctrl_iface_set_network(
 		}
 	}
 #endif
+
 	if (wpa_config_set(ssid, name, value, 0) < 0) {
 		wpa_printf(MSG_DEBUG, "CTRL_IFACE: Failed to set network "
 			   "variable '%s'", name);
@@ -1901,6 +1903,7 @@ static int wpa_supplicant_ctrl_iface_get_network(
 		res = os_snprintf(buf, buflen, "\"%s%s", ANDROID_IBSS_PREFIX, value+1);
 	else
 #endif
+
 	res = os_strlcpy(buf, value, buflen);
 	if (res >= buflen) {
 		os_free(value);
