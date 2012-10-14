@@ -37,7 +37,6 @@
 #include "wpas_glue.h"
 
 #define ANDROID_IBSS_HACK
-
 #ifdef ANDROID_IBSS_HACK
 /// NOTE: don't confuse WifiService.parseScanResult
 #define ANDROID_IBSS_PREFIX "(*)"
