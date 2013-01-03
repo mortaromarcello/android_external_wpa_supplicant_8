@@ -398,6 +398,7 @@ static int wpa_supplicant_ctrl_iface_wps_pbc(struct wpa_supplicant *wpa_s,
 #ifdef ANDROID_BRCM_P2P_PATCH	
 	struct wpa_supplicant *iface;
 #endif
+
 	if (cmd == NULL || os_strcmp(cmd, "any") == 0) {
 		_bssid = NULL;
 #ifdef CONFIG_P2P
